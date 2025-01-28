@@ -1,161 +1,299 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <!-- Left Side -->
-    <div class="left_side">
-      <div class="profileText">
-        <div class="imgbox">
-          <img src="formal pic.png" alt="Profile Picture">
-        </div>
-        <h2><span>BSIT-BA</span></h2>
-      </div>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-      <div class="contactInfo">
-        <h3 class="title">Contact Info</h3>
-        <ul>
-          <li>
-            <span class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
-            <span class="text">0947 8890 666</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <span class="text">chelseebustos@gmail.com</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
-            <span class="text">Chelsee Bustos</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
-            <span class="text">www.linkedin.com/me</span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-            <span class="text">Meralco Vill., Taytay, Rizal</span>
-          </li>
-        </ul>
-      </div>
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  background-image: url('bgresume1.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
 
-      <div class="skills">
-        <h3 class="title"><i class="fa fa-briefcase" aria-hidden="true"></i> Skills</h3>
-        <ul>
-          <li>
-            <span class="skill-name">Project Management</span>
-            <span class="skill-level">Advanced</span>
-            <div class="progress-bar">
-              <div class="progress" style="width: 80%;"></div>
-            </div>
-          </li>
-          <li>
-            <span class="skill-name">Creative Graphic Design</span>
-            <span class="skill-level">Expert</span>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%;"></div>
-            </div>
-          </li>
-          <li>
-            <span class="skill-name">Communication Skills</span>
-            <span class="skill-level">Expert</span>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%;"></div>
-            </div>
-          </li>
-          <li>
-            <span class="skill-name">Social Skills</span>
-            <span class="skill-level">Master</span>
-            <div class="progress-bar">
-              <div class="progress" style="width: 100%;"></div>
-            </div>
-          </li>
-          <li>
-            <span class="skill-name">Software Proficiency</span>
-            <span class="skill-level">Beginner</span>
-            <div class="progress-bar">
-              <div class="progress" style="width: 40%;"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
+/* Resume container */
+.container {
+  width: 60%;  
+  max-width: 800px;
+  min-height: 800px; 
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 10px;
+  box-shadow: 3px 8px 30px rgba(219, 219, 181, 0.5);
+  overflow: hidden;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-      <img id="changeButton" src="changebutton.png" alt="Change Colors">
+/* Left side styles */
+.container .left_side {
+  background: #786200; 
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.8s ease-in-out;
+}
 
-      <div class="proficient">
-        <ul>
-            <li><strong>Technical:</strong> Python, Java, HTML, CSS, JavaScript, Business Analytics, and Data Visualization</li>
-            <li><strong>Soft Skills:</strong> Problem-solving, Communication, Time management, and Teamwork</li>
-        </ul>
-      </div>
-    </div>
+.profileText {
+  color: #ffffff;
+}
 
-    <!-- Right Side -->
-    <div class="right_side">
-      <h1>CHELSEE L. BUSTOS</h1>
-      <h2>STUDENT</h2>
+.profileText h2 {
+  font-size: 1.5em;  
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.1em;
+  border-bottom: 1px solid #ffffff; 
+  padding-bottom: 20px; 
+}
 
-      <section class="profile">
-        <h3>Profile</h3>
-        <p>
-          I am a second-year student at FEU Tech, pursuing a degree in Information Technology with a specialization in Business Analytics. My academic commitment to excellence earned me the President's Scholarship.
-        </p>
-      </section>
+.contactInfo {
+  margin-top: none;
+}
 
-      <section class="education">
-        <h3>Educational Qualification</h3>
-        <ul>
-          <li>
-            <img class="award-logo" src="techicon.png" alt="School Logo">
-            <strong>Sep 2023 – Present:</strong> Bachelor of Science in Information Technology, FEU Institute of Technology
-          </li>
-          <li>
-            <img class="award-logo" src="olfuicon.png" alt="School Logo">
-            <strong>Aug 2021 – Jul 2023:</strong> Accountancy, Business and Management, Our Lady of Fatima University
-          </li>
-          <li>
-            <img class="award-logo" src="smmsicon.png" alt="School Logo">
-            <strong>Mar 2016 – May 2020:</strong> Primary, St. Martin Montessori Inc.
-          </li>
-          <li>
-            <img class="award-logo" src="awaicon.png" alt="School Logo">
-            <strong>May 2009 – Jun 2016:</strong> Preschool, Angel of Wisdom Academy
-          </li>
-        </ul>
-      </section>
+.title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
-      <section class="work-experience">
-        <h3>Work Experience</h3>
-        <ul>
-          <li><strong>Jun 2022 – Nov 2022:</strong> Marketing and Sales Associate, Calhrie Retails</li>
-        </ul>
-      </section>
+.contactInfo ul {
+  position: relative;
+  text-align: left;
+  padding-left: 20px;
+  color: #ffffff;
+}
 
-      <section class="honors-awards">
-        <h3>Honors and Awards</h3>
-        <ul>
-          <li><span class="highlight">With High Honors:</span> Jul 07, 2023, Our Lady of Fatima University</li>
-          <li><span class="highlight">Salutatorian:</span> Jun 06, 2021, St. Martin Montessori Inc.</li>
-          <li><span class="highlight">Valedictorian:</span> Mar 03, 2017, Angel of Wisdom Academy</li>
-        </ul>
-      </section>
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 12px 0;
+  cursor: pointer;
+  font-weight: 300;
+}
 
-      <section class="seminars">
-        <h3>Seminars</h3>
-        <ul>
-          <li><strong>Feb 2024:</strong> Attendee, The Role of UX Design in Developing Multimedia Solutions, Organized by FEU Tech The Innovator</li>
-          <li><strong>Feb 2024:</strong> Attendee, TECHNO WEEK: Digital Divide Performing Barriers to Strengthening through Paradigm Shift, Organized by FEU Tech The Innovator</li>
-          <li><strong>Feb 2024:</strong> Attendee, FTIC InnoveSpark Challenges, Organized by FEU Tech The Innovator</li>
-          <li><strong>May 2021:</strong> Attendee, AIESEC in UP Manila's Cultural Heritage Event, Organized by UP Manila's Kayumanggi</li>
-        </ul>
-      </section>
-    </div>
-  </div>
-</body>
-</html>
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #e5d5cd;
+}
+
+.imgbox {
+  width: 150px; 
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #ffc107; 
+
+}
+
+.imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out; 
+  opacity: 1; 
+  visibility: visible; 
+}
+
+
+/* Right side styles */
+.container .right_side {
+  background: #ffffff;
+  padding: 20px;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+#changeButton {
+  position: fixed;  
+  top: 38%;  
+  left: 5%;   
+  width: 10em;  
+  height: 3em;  
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#changeButton:hover {
+  transform: scale(1.05); 
+}
+
+.skills {
+  color: #fff;
+  background-color: #3d3d2f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  margin-top: 40px;
+  max-height: 600px;
+}
+
+.skills .title {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  display: inline-block;
+  font-size: 1em;
+  text-align: left; 
+  width: 70%; 
+}
+
+.skill-level {
+  float: right;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.progress-bar {
+  background: #ffffff;
+  border-radius: 5px;
+  height: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background: #ffdf0d;
+  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.skills.active {
+  background-color: #5a5a42; 
+  transition: background-color 0.8s ease-in-out;
+}
+
+.progress-bar .progress.active {
+  background: #af824c; 
+}
+
+.proficient {
+  margin-top: 30px;
+  font-size: 14px; 
+  color: #fff;
+}
+
+.proficient ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.proficient li {
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.proficient strong {
+  font-weight: bold;
+}
+
+.education ul {
+  list-style-type: none;
+  padding-left: 1px;
+}
+
+.honors-awards ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.award-logo {
+  width: 40px;  
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #774c00;  
+}
+
+.seminars li {
+  margin-bottom: 10px;
+}
+
+.seminars li strong {
+  font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container .left_side,
+  .container .right_side {
+    padding: 20px;
+  }
+
+  #changeButton {
+    top: 25%;
+    left: 5%; 
+    width: 13em; 
+    height: 3.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #changeButton {
+    top: 30%;
+    left: 5%; 
+    width: 12em; 
+    height: 3em;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container .left_side,
+  .container .right_side {
+    padding: 15px; 
+  }
+}
+
+@media (max-width: 480px) {
+  #changeButton {
+    top: 35%;
+    left: 5%; 
+    width: 10em; 
+    height: 3em;
+  }
+}
