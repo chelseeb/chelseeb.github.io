@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Left Container with Buttons -->
+        <div class="left-container">
+            <button class="monday" onclick="showBox('monday')">
+                <i class="bi bi-house-door"></i> Monday
+            </button>
+            <button class="tuesday" onclick="showBox('tuesday')">
+                <i class="bi bi-people"></i> Tuesday
+            </button>
+            <button class="wednesday" onclick="showBox('wednesday')">
+                <i class="bi bi-briefcase"></i> Wednesday
+            </button>
+            <button class="thursday" onclick="showBox('thursday')">
+                <i class="bi bi-calendar-event"></i> Thursday
+            </button>
+            <button class="friday" onclick="showBox('friday')">
+                <i class="bi bi-emoji-smile"></i> Friday
+            </button>
+            <button class="saturday" onclick="showBox('saturday')">
+                <i class="bi bi-umbrella"></i> Saturday
+            </button>
+            <button class="sunday" onclick="showBox('sunday')">
+                <i class="bi bi-sun"></i> Sunday
+            </button>
+        </div>
+
+       
+        <div class="right-container">
+            <div id="color-box" class="color-box"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
