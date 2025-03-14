@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="header">
+            <img src="calclogo.png" alt="Calculator Logo" class="logo">
+            <span class="calc-name">Calculator</span>
+        </div>
+
+        <div class="output-container">
+            <div id="output">0</div>
+        </div>
+
+        <div class="buttons">
+            <div class="button" onclick="clearDisplay()">C</div>
+            <div class="button" onclick="backSpace()">></div>
+            <div class="button" onclick="addToDisplay('/')">/</div>
+            <div class="button" onclick="addToDisplay('*')">×</div>
+
+            <div class="button" onclick="addToDisplay('7')">7</div>
+            <div class="button" onclick="addToDisplay('8')">8</div>
+            <div class="button" onclick="addToDisplay('9')">9</div>
+            <div class="button" onclick="addToDisplay('-')">−</div>
+
+            <div class="button" onclick="addToDisplay('4')">4</div>
+            <div class="button" onclick="addToDisplay('5')">5</div>
+            <div class="button" onclick="addToDisplay('6')">6</div>
+            <div class="button" onclick="addToDisplay('+')">+</div>
+
+            <div class="button" onclick="addToDisplay('1')">1</div>
+            <div class="button" onclick="addToDisplay('2')">2</div>
+            <div class="button" onclick="addToDisplay('3')">3</div>
+            <div class="button equal" onclick="computeResult()">=</div>
+
+            <div class="button zero" onclick="addToDisplay('0')">0</div>
+            <div class="button decimal" onclick="addToDisplay('.')">.</div>            
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
