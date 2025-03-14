@@ -55,32 +55,34 @@ body {
     gap: 8px;
 }
 
-
 .button {
     background-color: white;
     padding: 20px; 
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     text-align: center;
-    transition: 0.2s;
+    transition: background 0.3s, color 0.3s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button:active {
-    background-color: #ddd;
+.button:hover {
+    background-color: #fb9200;
+    color: white;
 }
-
 
 .zero {
     grid-column: span 2; 
     text-align: center;
+    border-radius: 30px;
 }
 
 .decimal {
     grid-column: 3 / 4;
 }
-
 
 .equal {
     background-color: #fb9200;
@@ -92,8 +94,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
 }
 
+.equal:hover {
+    background-color: #e07b00;
+}
 
 @media (max-width: 400px) {
     .calculator {
