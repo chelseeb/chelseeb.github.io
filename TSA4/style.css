@@ -11,7 +11,7 @@ body {
 }
 
 .container-fluid {
-    margin-left: 5dvw;
+    margin-left: 7dvw;
     margin-top: 4dvw;
 }
 
@@ -200,7 +200,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
     border-left: 50px solid #ffce3c;
-    position: relative; /* Ensures absolute child is positioned within */
+    position: relative; 
 }
 
 .detail-container::before {
