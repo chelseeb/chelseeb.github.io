@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap');
 
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('backgroundresto.png') no-repeat center center fixed ;
+    background: url('backgroundresto.png') no-repeat center center fixed;
     background-size: cover;
-    
-    
+    overflow: hidden;
+}
+
+.container-fluid {
+    margin-left: 5dvw;
+    margin-top: 4dvw;
 }
 
 .btn-primary {
@@ -32,16 +35,14 @@ body {
     transform: scale(1.05);
 }
 
-
 .title {
     text-align: left;
     color: white;
     padding-left: 50px;
     margin-top: 30px;
     position: relative;
-    max-width: 600px; 
+    max-width: 600px;
 }
-
 
 .title h2 {
     font-size: 26px;
@@ -64,7 +65,6 @@ body {
     border-radius: 2px;
 }
 
-
 .title h1 {
     font-size: 48px;
     font-weight: 700;
@@ -78,7 +78,6 @@ body {
     display: inline-block;
 }
 
-
 .title p {
     font-size: 16px;
     font-weight: 400;
@@ -87,7 +86,6 @@ body {
     line-height: 1.5;
     position: relative;
 }
-
 
 .title::before {
     content: "";
@@ -99,7 +97,6 @@ body {
     background-color: #d01f00;
 }
 
-
 @keyframes glow {
     0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
     50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
@@ -109,9 +106,6 @@ body {
 .title h1, .title h2 {
     animation: glow 2s infinite alternate;
 }
-
-
-
 
 .restaurant-card {
     cursor: pointer;
@@ -126,7 +120,7 @@ body {
 
 .restaurant-card img {
     width: 250%;
-    height: 150%;
+    height: 120%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -147,31 +141,28 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 0;
-    font-size: 11px; 
+    font-size: 8px;
 }
-
 
 .restaurant-card:hover .info {
     opacity: 1;
     transform: translateY(0);
-    height: 25%; 
+    height: 25%;
     padding: 10px;
 }
-
 
 .info p {
     flex-grow: 1;
     margin-bottom: -20px;
-    font-size: 15px; 
+    font-size: 15px;
 }
-
 
 .info button {
     color: black !important;
     font-weight: 600;
-    font-size: 15px; 
+    font-size: 15px;
     position: relative;
     bottom: 0;
     padding: 2px 6px;
@@ -179,11 +170,8 @@ body {
 
 .info button i {
     color: black !important;
-    font-size: 15px; 
+    font-size: 15px;
 }
-
-
-
 
 .detail-text h2, 
 .detail-text p, 
@@ -202,34 +190,46 @@ body {
     align-items: center;
     padding: 40px 0;
 }
+
 .detail-container {
     background-color: white;
-    padding: 0px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     width: 75%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
-    border-left: 40px solid #ffce3c; 
+    border-left: 50px solid #ffce3c;
+    position: relative; /* Ensures absolute child is positioned within */
 }
 
-.detail-container:hover {
-    transform: scale(1.02);
+.detail-container::before {
+    content: "FEATURED"; 
+    position: absolute;
+    left: -30px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl; 
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    letter-spacing: 2px;
 }
+
 
 .detail-container:hover {
     transform: scale(1.02);
 }
 
 .detail-container img {
-    width: 100%; 
-    max-width: 380px; 
+    width: 100%;
+    max-width: 380px;
     height: 470px;
     margin-right: 25px;
     margin-left: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 .detail-text {
     flex: 1;
 }
@@ -238,23 +238,21 @@ body {
     margin-top: 30px;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #f60000;
 }
 
 .detail-text p {
     font-size: 16px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.4;
     margin-bottom: 10px;
+    margin-right: 45px;
 }
 
 .detail-text strong {
     color: #222;
 }
-
-
-
 
 @keyframes fadeIn {
     from {
