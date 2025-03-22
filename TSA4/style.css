@@ -225,116 +225,116 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+
     
-}.detail-container {
-    position: fixed;
-    background-color: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90vw; 
-    min-height: 25vw; 
-    max-width: 1000px; 
-    margin: -1vw auto;
-    padding: 15px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
-    border-left: 40px solid #ffce3c; 
-    position: relative;
-    flex-wrap: wrap;
-}
-
-.detail-container::before {
-    content: "FEATURED";
-    position: absolute;
-    left: -30px; 
-    transform: translateY(-20%) rotate(180deg);
-    writing-mode: vertical-rl;
-    font-size: 16px; 
-    font-weight: bold;
-    color: rgb(255, 0, 0);
-    letter-spacing: 2px;
-}
-
-.detail-container:hover {
-    transform: scale(1.02);
-}
-
-.detail-container img {
-    width: 100%;
-    max-width: 340px; 
-    height: auto;
-    margin-right: 20px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.detail-text {
-    flex: 1;
-    min-width: 130px; 
-    padding: 8px; 
-}
-
-.detail-text h2 {
-    font-size: clamp(18px, 2.5vw, 36px); 
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #f60000;
-}
-
-.detail-text p {
-    font-size: clamp(12px, 1.3vw, 16px); 
-    color: #555;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    margin-right: 20px;
-}
-
-.detail-text strong {
-    color: #222;
-}
-
-@media (max-width: 1024px) {
     .detail-container {
-        flex-direction: column;
+        position: fixed;
+        background-color: white;
+        border-radius: 12px;
+        display: flex;
         align-items: center;
-        text-align: center;
-    }
-
-    .detail-container img {
-        margin-bottom: 15px;
-        margin-right: 0;
-    }
-
-    .detail-text {
+        justify-content: space-between;
+        width: 85vw; 
+        min-height: 20vw; 
+        max-width: 950px; 
+        margin: -1vw auto;
         padding: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .detail-container {
-        width: 90%;
-        padding: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+        border-left: 35px solid #ffce3c;
+        flex-wrap: wrap;
+        position: relative;
     }
 
     .detail-container::before {
-        left: -20px;
-        font-size: 14px;
+        position: absolute;
+        left: -22px;  
+        transform: translateY(-15%) rotate(180deg);
+        writing-mode: vertical-rl;
+        font-size: 15px;  
+        font-weight: bold;
+        color: rgb(255, 0, 0);
+        letter-spacing: 1.6px;
+    }
+
+    .detail-container:hover {
+        transform: scale(1.03);
+    }
+
+    .detail-container img {
+        width: 100%;
+        max-width: 300px;  
+        height: auto;
+        margin-right: 18px;  
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+    }
+
+    .detail-text {
+        flex: 1;
+        min-width: 120px;  
+        padding: 8px;  
+    }
+
+    .detail-text h2 {
+        font-size: clamp(18px, 2.2vw, 30px);  
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #f60000;
     }
 
     .detail-text p {
-        margin-right: 0;
+        font-size: clamp(11px, 1.2vw, 15px);  
+        color: #555;
+        line-height: 1.4;
+        margin-bottom: 8px;
+        margin-right: 12px;
     }
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+    .detail-text strong {
+        color: #222;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    @media (max-width: 1024px) {
+        .detail-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .detail-container img {
+            margin-bottom: 12px;
+            margin-right: 0;
+        }
+
+        .detail-text {
+            padding: 12px;
+        }
     }
-}
+
+    @media (max-width: 768px) {
+        .detail-container {
+            width: 88%;
+            padding: 12px;
+        }
+
+        .detail-container::before {
+            left: -18px;
+            font-size: 13px;
+        }
+
+        .detail-text p {
+            margin-right: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }}
